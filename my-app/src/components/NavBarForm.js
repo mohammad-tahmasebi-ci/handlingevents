@@ -22,16 +22,8 @@ export class NavBarForm extends Component {
     return (
       <div className='NavBar'>
         {this.state.isLoggedIn ? (
-          <div className='frmContainer'>
-          <form>
-            <label htmlFor='username'>Username: </label>
-            <input type='text' id='username'/>
-            <span>     </span>
-            <label htmlFor='password'>Password: </label>
-            <input type='text' id='password'/>
-            <span>    </span>
-            <button onClick={props.handleLogin}>Submit</button>
-          </form>
+          <div>
+              <NavBarChild isLoggedIn={this.state.isLoggedIn} />
           </div>
         ) : (
           <div>
